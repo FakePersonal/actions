@@ -1,4 +1,18 @@
-print("hello world!")
+sections = open("section.txt", "w")
+sections.close()
 
-for i in range(2):
-    print("hello world!")
+while True:
+    student = input("Enter the student name,ID,level: ")
+
+    result = ""
+    studentsDetails = []
+    for letters in student:
+        if letters == ",":
+            studentsDetails.append(result)
+            result = ""
+        else:
+            result += letters
+    studentsDetails.append(result)
+    break
+
+DATABASE = {studentsDetails[0]: studentsDetails}
