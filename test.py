@@ -137,6 +137,3 @@ elif logicFunction == "not":
 else:  # if the "logicFunction" input was not a logic function.
     print("Error:unknown logic function")
 
-# -------------------------------------------
-# ------------------[DONE]-------------------
-# -------------------------------------------
