@@ -1,4 +1,4 @@
-print("hello world!")
+x = ("apple", "banana", "cherry")
 
-for i in range(2):
-    print("hello world!")
+for i in x:
+    print(x)
