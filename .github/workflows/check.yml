@@ -16,13 +16,19 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
-          
-      - uses: actions/setup-python@v4
-        with: 
-          python-version: 3.x
+      - name: Lint Code Base
+        uses: super-linter/super-linter@v5
         env:
-          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
-      - run: python -m pip install ruff mypy
-      - run: ruff test.py
-      - run: mypy test.py
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+#       - uses: actions/setup-python@v4
+#         with: 
+#           python-version: 3.x
+#         env:
+#           AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
+#       - run: python -m pip install ruff mypy
+#       - run: ruff test.py
+#       - run: mypy test.py
         
