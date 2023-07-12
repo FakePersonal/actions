@@ -17,7 +17,6 @@ jobs:
           fetch-depth: 0
           submodules: true
           
-      - name: Python Check
       - uses: actions/setup-python@4
         with: 
           python-wersion: 3
