@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Lint Code Base
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
@@ -15,7 +15,6 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
-          options: --user 1001
           
       - name: Lint Code Base
         uses: super-linter/super-linter@v5
