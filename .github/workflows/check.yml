@@ -1,21 +1,27 @@
 name: Lint Code Base
 
+
 on:
   push:
   pull_request:
-
+    
 jobs:
+  
   build:
     name: Lint Code Base
     runs-on: self-hosted
   
 
     steps:
+      - name: Deleting First
+        run: cd ~/actions-runner/_work/actions && sudo rm -rf actions
+        
       - name: Checkout Code
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           submodules: true
+        
           
       - name: Lint Code Base
         uses: super-linter/super-linter@v5
