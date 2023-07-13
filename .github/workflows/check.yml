@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Deleting First
-        run: cd ~/actions-runner/_work/actions && sudo rm -rf actions
+        run: cd ~/actions-runner/_work/actions && sudo chmod 777 actions
         
       - name: Checkout Code
         uses: actions/checkout@v3
