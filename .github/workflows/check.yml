@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Giving Access
-        run: sudo chmod 777 ~/actions-runner/_work/actions/actions
+        run: sudo chmod -Rf ugo+rwx ~/actions-runner/_work/actions/actions
         
       - name: Checkout Code
         uses: actions/checkout@v3
