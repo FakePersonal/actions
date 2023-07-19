@@ -1,0 +1,20 @@
+name: Test
+
+
+on:
+  workflow_dispatch:
+
+jobs:
+  
+  test:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+    steps:
+      - run: id
+      
+  test-container:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:22.04
+    steps:
+      - run: id
