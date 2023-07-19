@@ -8,10 +8,10 @@ on:
 jobs:
   
   test:
-    name: Lint Code Base
     runs-on: ubuntu-latest
     steps:
       - run: id
+      - run: umask
       
   test-container:
     runs-on: ubuntu-latest
@@ -19,3 +19,4 @@ jobs:
       image: ubuntu:22.04
     steps:
       - run: id
+      - run: umask
