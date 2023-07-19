@@ -2,9 +2,10 @@ name: Lint Code Base
 
 
 on:
-  push:
-  pull_request:
-    
+  #push:
+  #pull_request:
+  workflow_dispatch:
+
 jobs:
   
   build:
@@ -13,8 +14,8 @@ jobs:
   
 
     steps:
-      - name: Giving Access
-        run: sudo chmod -Rf ugo+rwx ~/actions-runner/_work/actions/actions
+      #- name: Giving Access
+      #  run: sudo chmod -Rf ugo+rwx ~/actions-runner/_work/actions/actions
         
       - name: Checkout Code
         uses: actions/checkout@v3
