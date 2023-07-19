@@ -2,7 +2,7 @@ name: Test
 
 
 on:
-  push:
+  #push:
   workflow_dispatch:
 
 jobs:
@@ -12,7 +12,13 @@ jobs:
     steps:
       - run: id
       - run: umask
-      
+      - name: Lint Code Base
+        uses: super-linter/super-linter@v5
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   test-container:
     runs-on: ubuntu-latest
     container:
